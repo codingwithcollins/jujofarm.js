@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>cobraska cereals
+
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .webimage {
+            image-rendering: auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Style the body */
+        
+        body {
+            font-family: "Trirong", serif;
+            ;
+            margin: 0;
+        }
+        /* Header/logo Title */
+        
+        .container {
+            text-align: centered;
+            color: #f1f1f1;
+            height: 50%;
+        }
+        
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+        }
+        
+        .header {
+            width: 20px;
+            padding: 80px;
+            text-align: center;
+            background: #3a95f7;
+            color: white;
+            display: block;
+        }
+        /* Increase the font size of the heading */
+        
+        .header h1 {
+            font-size: 60px;
+        }
+        /* Style the top navigation bar */
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        /* Style the navigation bar links */
+        
+        .navbar a {
+            float: left;
+            display: inline-flex;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        /* Right-aligned link */
+        
+        .navbar a.right {
+            float: right;
+        }
+        /* Change color on hover */
+        
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /* Column container */
+        
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        
+        .side {
+            -ms-flex: 30%;
+            /* IE10 */
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .item1 {
+            width: 50%;
+            height: 50px;
+        }
+        /*price tag*/
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+        
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .card button:hover {
+            opacity: 0.7;
+        }
+        /* Main column */
+        
+        .main {
+            -ms-flex: 70%;
+            /* IE10 */
+            flex: 70%;
+            padding: 20px;
+            font-weight: 600;
+            font-size: medium;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        /*price tag stuff*/
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 200px;
+            max-height: 900px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+        
+        .card button {
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .card button:hover {
+            background-color: rgb(195, 91, 0);
+        }
+        
+        #dddddd
+        /*maize product 1*/
+        
+        .product1 {
+            flex: 70%;
+            padding: 20px;
+            display: grid;
+        }
+        /*product2*/
+        
+        .float-container {
+            padding: 20px;
+        }
+        
+        .float-child {
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+        
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+        
+        .btn-group button {
+            background-color: #3e7aeb;
+            /* Green background */
+            border: 1px solid rgb(133, 109, 45);
+            /* Green border */
+            color: white;
+            /* White text */
+            padding: 10px 24px;
+            /* Some padding */
+            cursor: pointer;
+            /* Pointer/hand icon */
+            width: 100%;
+            /* Set a width if needed */
+            display: inline-block;
+            /* Make the buttons appear below each other */
+            border-bottom: none;
+            /* Prevent double borders */
+        }
+        
+        .btn-group button:not(:last-child) {
+            border-bottom: none;
+            /* Prevent double borders */
+        }
+        /* Add a background color on hover */
+        
+        .btn-group button:hover {
+            background-color: #3e8e41;
+            font-size: large;
+        }
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="webimage" src="cereals.avif" alt="COBRASKA CEREALS" width="1600px" height="500px">
+        <div class="centered">COBRASKA CEREALS</div>
+    </div>
+    <div class=" navbar ">
+
+        <a href="# ">HOME</a>
+        <a href="# ">PRODUCTS</a>
+        <a href="# ">ABOUT</a>
+
+
+    </div>
+
+    <div class="row ">
+        <div class="side ">
+            <div class="float-container">
+                <img src="images/BlackEyedPeas.jpg" width="100%" height="300">
+                <p>
+                    Best quality cereals.We provide customers with the best quality cereals in the market at affordable and standard prices
+                </p>
+                <div class="item2" style="height:200px;">
+                    <ul style="list-style-type: disc;">
+                        <li>beans</li>
+                        <li>maize</li>
+                        <li>ndegu</li>
+                        <li>rice</li>
+                    </ul>
+                    <p>we assure you cereals being sold have been inspected and assured</p>
+                    <div class="item1" style="height: 200px;">
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main ">
+
+        <div class="float-container">
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/njahi-farming-in-kenya-farmers-trend.webp" alt="Denim Jeans" style="width:100%">
+                    <h1>njahi</h1>
+                    <p class="price">ksh159</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/beans2.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>beans</h1>
+                    <p class="price">ksh198</p>
+
+                    <p><button>BUY</button>
+                        <a href="#https://web.whatsapp.com/" class="button"></a>
+                    </p>
+                </div>
+            </div>
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/bean4.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>maharagwe moto</h1>
+                    <p class="price">ksh180</p>
+
+                    <p><button>BUY</button>
+                        <a href="#https://web.whatsapp.com/" class="button"></a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/ndegu 1.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>maharagwe 3</h1>
+                    <p class="price">ksh170</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+
+
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/bean5.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>rosecoco beans</h1>
+                    <p class="price">ksh210</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/mboso2.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>yellow maize</h1>
+                    <p class="price">ksh170</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/beans3.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>maharagwe moto</h1>
+                    <p class="price">ksh180</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/ndegu 1.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>maharagwe 3</h1>
+                    <p class="price">ksh170</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/mboso2.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>maharagwe moto</h1>
+                    <p class="price">ksh180</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+
+            <div class="float-child">
+                <div class="card">
+                    <img src="images/ndegu 1.jpg 1.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>maharagwe 3</h1>
+                    <p class="price">ksh170</p>
+
+                    <p><button>BUY</button></p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class=" footer ">
+        <h2>contact us</h2>
+    </div>
+    <div class="btn-group ">
+        <button>facebook</button>
+        <button>gmail</button>
+        <button>whatsapp</button>
+    </div>
+    <div class=" footer ">
+        <h2>&copy; by collins</h2>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
